@@ -1,0 +1,55 @@
+nce you’ve moved to a continuous deployment process, you’ll need to have several pieces of automation in place.  You must automate your continuous integration build server and continuous delivery to staging, as well as have the ability to automatically deploy to production.  
+
+ 
+
+cd process diagram resized 600
+
+In the ideal workflow, the entire process could be automated from start to finish:
+
+Step 1:  Developer checks in code to development branch.
+
+Step 2: Continuous integration server picks up the change, merges it with Master/Trunk/Mainline, performs unit tests and votes on the merge to staging environment based on test results.
+
+Step 3. If Step 2 is successful, developer deploys it to the staging environment and QA tests the environment.
+
+Step 4. If Step 3 passed, you vote to move to production and the continuous integration server picks this up again and determines if it’s ok to merge into production.
+
+Step 5. If Step 4 is successful, it will deploy to production environment.  
+
+
+he Difference between CI and CD
+
+It’s unclear how this conflation of the two terms originated. But it’s easy enough to clear up.
+
+Simply put, CI is the process of integrating code into a mainline code base. In almost all scenarios today, CI is done using platforms designed specifically for the purpose. Implementing CI is, therefore, as simple as using the right tools.
+
+CD is more complicated. CD is about the processes that have to happen after code is integrated for app changes to be delivered to users. Those processes involving testing, staging and deploying code. There is no single type of tool that does all these things. These processes take different forms, depending on the culture of the team and the type of app it is creating.
+
+In actuality, then, CI and CD share little in common. Besides starting with the same word (“continuous”) and being different stages in modern software delivery pipelines, they don’t have much to do with one another.
+
+
+make sure that you have have to confidence of the application and the code is to be ready ,then deployed to production.in the continous delivery since every change is delivered to a stagging enviornment using complete automation 
+
+
+
+Regression testing
+Regression Testing is nothing but full or partial selection of already executed test cases which are re-executed to ensure existing functionalities work fine.
+
+This testing is done to make sure that new code changes should not have side effects on the existing functionalities. It ensures that old code still works once the new code changes are done. 
+
+
+staging enviornment
+staging enviornment for final testing immediately prior to deploying to production`
+
+The staging environment lets you move Web site assets within and across different environments. For example, you can move a new Web page or a marketing campaign from a test environment to a production environment. In an enterprise deployment, you can define staging projects to move content from the development environment to the integration/test environment, from there to the staging environment, and from there to the production environment.
+The staging environment consists of two components:
+The staging database server.
+The staging server.
+deploy vs build
+
+I will start with deploy. Deploy should mean take all of my artifacts and either copy them to a server, or execute them on a server. It should truly be a simple process.
+
+Build means, process all of my code/artifacts and prepare them for deployment. Meaning compile, generate code, package, etc.
+What is Requirements Traceability Matrix in Software Testing?
+Requirements tracing is the process of documenting the links between the user requirements for the system you're building and the work products developed to implement and verify those requirements. These work products include Software requirements, design specifications, Software code, test plans and other artifacts of the systems development process. Requirements tracing helps the project team to understand which parts of the design and code implement the user's requirements, and which tests are necessary to verify that the user's requirements have been implemented correctly.
+
